@@ -1,0 +1,434 @@
+*{
+    font-family: Calibri;
+    user-select: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+/* .complete{opacity: 0.4;} */
+.radial-progress {
+  padding: 5px;
+  transform: rotate(-90deg);
+}
+.hud-container {
+    display: inline-flex;
+    position: absolute;
+    bottom: -0.3%;
+    left: 0.0%;
+}
+.radial-progress image {
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg) rotate(-180deg);
+}
+
+.vehicle-container {
+    transition: opacity 0.5s;
+    position: absolute;
+    bottom: 0.7vh;
+    left: -1.0vh;
+}
+
+.backgroundCircle, .outer {
+    transform: rotate(130deg);
+    transform-origin: 50% 50%;
+}
+
+.complete.voice{fill: #ffffff; opacity: 0.35;}
+.complete.health{fill: #3ac180; opacity: 0.35;}
+.complete.armor{fill: #2a7ae0; opacity: 0.35;}
+.complete.hunger{fill: #f37928; opacity: 0.35;}
+.complete.thirst{fill: #3289d8; opacity: 0.35;}
+/* .complete.stress{fill: #FF0000; opacity: 0.35;} */
+.complete.lungs{fill: #c2c2c2; opacity: 0.35;}
+.complete.stamina{fill: #fa9120; opacity: 0.35;}
+.complete.nitro{fill: #ca456b; opacity: 0.35;}
+
+.hud-settings-container {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%,-50%);
+
+    width: 550px;
+    height: auto;
+
+    background-color:rgb(34, 40, 50);
+
+    border-radius: 5px;
+}
+
+.hud-settings-header-container{
+    text-align: center;
+    padding: 10px 25px;
+}
+
+.hud-settings-header-container .title2 {
+    color: #c3c1bf;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+.save-btn {
+    outline: none;
+
+    line-height: 1.5;
+    border: 1px solid hsl(0, 0%, 10%);
+    color: white;
+    background: rgb(104, 159, 56);
+    padding: 5px 20px;
+    border-radius: 5px;
+    transition: .4s;
+}
+
+.hud-settings-header-container .save-btn:hover {
+    background: hsl(203, 13%, 19%);
+}
+
+.line-break {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 95%;
+    background: #c3c1bf;
+}
+
+.help-text2 {
+    color: #c3c1bf;
+    padding: 20px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+}
+
+.hud-settings-checkboxs ul {
+    padding: 0;
+    margin-top: 5px;
+}
+
+.hud-settings-checkboxs{
+    margin-top: 5px;
+}
+
+.checkbox-container{
+    padding: 10px 20px;
+}
+
+.hud-settings-container label {
+    color: #afafaf;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+}
+
+.hud-settings-container input[type="checkbox"] {
+    display: none;
+}
+
+.hud-settings-container input[type="checkbox"] + label {
+    position: relative;
+    display: inline-block;
+    padding-top: .5rem;
+    padding-left: 2rem;
+    /* transition: background 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25); */
+    transition: .2s ease-in-out;
+}
+
+.hud-settings-container input[type="checkbox"] + label::before,
+.hud-settings-container input[type="checkbox"] + label::after {
+    content: '';
+    position: absolute;
+}
+
+.hud-settings-container input[type="checkbox"] + label::before {
+    left: 0;
+    top: 6px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid black;
+    transition: .3s ease-in-out;
+    border-radius: 5px;
+}
+
+.hud-settings-container input[type="checkbox"]:checked + label::before {
+    background: rgb(238, 167, 106);
+}
+
+.hud-settings-container input[type="checkbox"]:checked + label::after {
+    left: 8px;
+    top: 10px;
+    width: 4px;
+    height: 10px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    transform: rotate(45deg);
+}
+
+.checkbox-container input[type="number"]{
+    position: absolute;
+    right: 10%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid  white;
+    color: #afafaf;
+    line-height: 1.5;
+    padding: 5px;
+    background: transparent;
+    transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
+    transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.checkbox-container input[type="number"]:focus {
+    background: hsl(0, 7%, 20%);
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.hud-settings-bottom-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/*  CIRCLE MAP  */
+
+.outline {
+    display: none;
+    position: fixed!important;
+    bottom: 7%;
+    left: 1.43%;
+    width: 0%;
+    text-align: center;
+}
+.mapborder {
+    left: -2.1vh;
+    width: 23.65vh;
+    height: 20.0vh;
+    border: 3.5px solid #cecece;
+    border-radius: 50%;
+    position: relative;
+    top: 18px;
+    display: inline-block;
+}
+
+/*  VEHICLE HUD  */
+
+.seatbelt img {
+    position: absolute;
+    bottom: 8.0vh;
+    width: 2.5vh;
+    left: 18.8vw;
+}
+
+.speedamount {
+    position: relative;
+    bottom: 100%;
+    font-size: 15;
+    text-align: center;
+    margin-right: 1540px;
+}
+
+.speedamount .stat {
+    background: linear-gradient(to top, #5b5b5b 90%, #1bd295 90%);
+    text-align: right;
+}
+
+.speedamount .stat span {
+    white-space: nowrap;
+    right: 20px;
+}
+
+.progress {
+    -webkit-transition: 0.35s stroke-dashoffset;
+    -o-transition: 0.35s stroke-dashoffset;
+    transition: 0.35s stroke-dashoffset;
+    -webkit-transform: rotate(140deg);
+    -ms-transform: rotate(140deg);
+    transform: rotate(140deg);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.progress2 {
+    -webkit-transition: 0.35s stroke-dashoffset;
+    -o-transition: 0.35s stroke-dashoffset;
+    transition: 0.35s stroke-dashoffset;
+    -webkit-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    transform: rotate(120deg);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.backgroundCircle,
+.outer {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+#SpeedCircle {
+    width: 5vh !important;
+    height: 5vh !important;
+    position: absolute;
+    font-size: 5vh;
+    left: 22.8vh;
+    bottom: 5.6vh;
+    background: rgba(27, 27, 27, 0.336);
+    transform: rotate(-180deg);
+}
+
+#SpeedIndicator {
+    color: white;
+    position: inherit;
+    z-index: 1000;
+    left: 1vh;
+    top: 0.1vh;
+    width: 3vh;
+    font-size: 2vh;
+    text-align: center;
+    transform: rotate(-180deg);
+}
+
+#SpeedGauge {
+    position: relative;
+    width: 5.1vw;
+    height: 2vh;
+    margin-top: 20px;
+    margin-right: -10px;    
+}
+
+.speedSVG {
+    position: absolute;
+    bottom: 5vh;
+    left: 15vw;
+}
+
+.speedometerPost {
+    position: absolute;
+    bottom: 0.1vh;
+    left: 0.1vw;
+}
+
+.Speed_Meter {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 33.069vw;
+    top: 40.75vh;
+    font-size: 1.5vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4vh;
+    font-weight: bold;
+}
+
+.mph {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9vh;
+    font-weight: bold;
+    color: white;
+    height: 1.0vh;
+    bottom: 7.4vh;
+    left: 16.37vw;
+}
+
+.fuel {
+    position: absolute;
+    bottom: 4.7vh;
+    left: 17.3vw;
+}
+
+
+#FuelCircle {
+    width: 3vh !important;
+    height: 3vh !important;
+    position: absolute;
+    left: 20.4vh;
+    bottom: 4.2vh;
+    background: rgba(27, 27, 27, 0.336);
+    transform: rotate(-180deg);
+}
+
+.Gas_gauge {
+    position: absolute;
+    bottom: 1vh;
+    width: 2.5vw;
+    height: 1vh;
+}
+
+.Gas_Icon {
+    position: absolute;
+    bottom: 1.65vh;
+    left: 0.75vw;
+    font-size: 0.1vh;
+    color: white;
+}
+
+.fa-gas-pump {
+    color: white;
+    font-size: 1.1vh;
+}
+
+/* Compass */
+
+.topimg {
+	position: absolute;
+    bottom: 98%;
+    left: 50%;
+    top: 1%;
+	color: #111111;
+	/* border-radius: 5px; */
+	width: 15px;
+	height: 10px;
+	overflow: hidden;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+	background-image: url('imgs/compass-top.png');
+}
+
+.direction {
+	position: absolute;
+    bottom: 98%;
+    left: 50%;
+    top: 2%;
+	color: #111111;
+	background-color: rgba(226, 226, 226, 0);
+	/* border-radius: 5px; */
+	width: 260px;
+	height: 26px;
+	overflow: hidden;
+	float: left;
+    transform: translate(-50%, -50%);
+}
+
+.image {
+	height: 100%;
+	background-position: center center;
+	background-size: 500px;
+	background-repeat: repeat;
+	width: 800%;
+	z-index: 1;
+	background-image: url('imgs/compass.png');
+}

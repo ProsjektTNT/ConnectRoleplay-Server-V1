@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/c339e1d3f9.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="interface.js" defer></script>
+  <script src="font-awsome.js"></script>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body style="margin: 0px;">
+  <div class="hud-container">
+    <div class="container">
+      <svg class="radial-progress voice" width="45" height="45">
+        <circle class="complete voice" cx="22.5" cy="22.5" r="22.5"></circle>
+        <circle id="voice" class="incomplete" cx="22.5" cy="22.5" r="16" stroke-dasharray="100.48"
+          stroke-dashoffset="33.49333333333333" stroke-width="13" stroke="#FFFFFF" />
+        <circle class="bg" cx="22.5" cy="22.5" r="17" fill="rgb(42, 40, 40)" />
+        <image href="imgs/voice.svg" width="11.5" x="16.6" y="13.5" id="imageV"></image>
+      </svg>
+    </div>
+    <div class="container">
+      <svg class="radial-progress health" width="45" height="45">
+        <circle class="complete health" cx="22.5" cy="22.5" r="22.5"></circle>
+        <circle class="incomplete" cx="22.5" cy="22.5" r="16" stroke-dasharray="100.48" stroke-dashoffset="100.48"
+          stroke-width="13" stroke="#3ac180" />
+        <circle class="bg" cx="22.5" cy="22.5" r="17" fill="rgb(42, 40, 40)" />
+        <image href="imgs/health.svg" width="17.5" x="14" y="13.5"></image>
+      </svg>
+    </div>
+    <div class="container">
+      <svg class="radial-progress armor" width="45" height="45">
+        <circle class="complete armor" cx="22.5" cy="22.5" r="22.5"></circle>
+        <circle class="incomplete" cx="22.5" cy="22.5" r="16" stroke-dasharray="100.48" stroke-dashoffset="100.48"
+          stroke-width="13" stroke="#2a7ae0" />
+        <circle class="bg" cx="22.5" cy="22.5" r="17" fill="rgb(42, 40, 40)" />
+        <image href="imgs/shield.svg" width="17" x="14" y="13.5"></image>
+      </svg>
+    </div>
+    <div class="container">
+      <svg class="radial-progress hunger" width="45" height="45">
+        <circle class="complete hunger" cx="22.5" cy="22.5" r="22.5"></circle>
+        <circle class="incomplete" cx="22.5" cy="22.5" r="16" stroke-dasharray="100.48" stroke-dashoffset="100.48"
+          stroke-width="13" stroke="#f37928" />
+        <circle class="bg" cx="22.5" cy="22.5" r="17" fill="rgb(42, 40, 40)" />
+        <image href="imgs/hunger.svg" width="17.5" x="13.5" y="13"></image>
+      </svg>
+    </div>
+    <div class="container">
+      <svg class="radial-progress thirst" width="45" height="45">
+        <circle class="complete thirst" cx="22.5" cy="22.5" r="22.5"></circle>
+        <circle class="incomplete" cx="22.5" cy="22.5" r="16" stroke-dasharray="100.48" stroke-dashoffset="100.48"
+          stroke-width="13" stroke="#3289d8" />
+        <circle class="bg" cx="22.5" cy="22.5" r="17" fill="rgb(42, 40, 40)" />
+        <image href="imgs/water.svg" width="12.0" x="16.5" y="13.7"></image>
+      </svg>
+    </div>
+    <!-- <div class="container">
+          <svg class="radial-progress stress" width="45" height="45">
+              <circle class = "complete stress" cx="22.5" cy="22.5" r="22.5"></circle>
+              <circle class = "incomplete" cx="22.5" cy="22.5" r="16" stroke-dasharray="100.48" stroke-dashoffset="100.48" stroke-width="13" stroke="#FF0000"/>
+              <circle class = "bg" cx="22.5" cy="22.5" r="17" fill="rgb(42, 40, 40)"/>
+            <image href="imgs/stress.svg" width="20" x="12.7" y="14"></image>
+          </svg>
+      </div> -->
+    <div class="container">
+      <svg class="radial-progress lungs" width="45" height="45">
+        <circle class="complete lungs" cx="22.5" cy="22.5" r="22.5"></circle>
+        <circle class="incomplete" cx="22.5" cy="22.5" r="16" stroke-dasharray="100.48" stroke-dashoffset="100.48"
+          stroke-width="13" stroke="#c2c2c2"></circle>
+        <circle class="bg" cx="22.5" cy="22.5" r="17" fill="rgb(42, 40, 40)"></circle>
+        <image href="imgs/lungs.svg" width="20" x="12.7" y="14"></image>
+      </svg>
+    </div>
+    <div class="container">
+      <svg class="radial-progress stamina" width="45" height="45">
+        <circle class="complete stamina" cx="22.5" cy="22.5" r="22.5"></circle>
+        <circle class="incomplete" cx="22.5" cy="22.5" r="16" stroke-dasharray="100.48" stroke-dashoffset="100.48"
+          stroke-width="13" stroke="#fa9120"></circle>
+        <circle class="bg" cx="22.5" cy="22.5" r="17" fill="rgb(42, 40, 40)"></circle>
+        <image href="imgs/stamina.svg" width="14.5" x="14.5" y="13"></image>
+      </svg>
+    </div>
+    <div class="container">
+      <svg class="radial-progress nitro" width="45" height="45">
+        <circle class="complete nitro" cx="22.5" cy="22.5" r="22.5"></circle>
+        <circle class="incomplete" cx="22.5" cy="22.5" r="16" stroke-dasharray="100.48" stroke-dashoffset="100.48"
+          stroke-width="13" stroke="#ca456b"></circle>
+        <circle class="bg" cx="22.5" cy="22.5" r="17" fill="rgb(42, 40, 40)"></circle>
+        <image href="imgs/nitro.svg" width="17" x="14" y="13.5"></image>
+      </svg>
+    </div>
+    <div class="container">
+      <svg class="radial-progress debug" width="45" height="45">
+        <circle class="complete debug" cx="22.5" cy="22.5" r="22.5"></circle>
+        <circle class="incomplete" cx="22.5" cy="22.5" r="16" stroke-dasharray="100.48" stroke-dashoffset="100.48"
+          stroke-width="13" stroke="#000000"></circle>
+        <circle class="bg" cx="22.5" cy="22.5" r="17" fill="rgb(42, 40, 40)"></circle>
+        <image href="imgs/debug.svg" width="17" x="14" y="13.5"></image>
+      </svg>
+    </div>
+  </div>
+  </div>
+  <div class="hud-settings-container" style="display: none;">
+    <div class="hud-settings-header-container">
+      <span class="title2">HUD Settings</span>
+    </div>
+    <div class="line-break"></div>
+    <div class="hud-settings-checkboxs">
+      <span class="help-text2">Press the save button in order to save the settings.</span><br>
+      <span class="help-text2">Hide when more than... (100 = never hide)</span>
+      <ul>
+        <li>
+          <div class="checkbox-container">
+            <input type="checkbox" id="health" checked="">
+            <label for="health">Show Health</label>
+            <input id="health-val" type="number" placeholder="95%">
+          </div>
+        </li>
+        <li>
+          <div class="checkbox-container">
+            <input type="checkbox" id="armor" checked="">
+            <label for="armor">Show Armor</label>
+            <input id="armor-val" type="number" placeholder="95%">
+          </div>
+        </li>
+        <li>
+          <div class="checkbox-container">
+            <input type="checkbox" id="hunger" checked="">
+            <label for="hunger">Show Hunger</label>
+            <input id="hunger-val" type="number" placeholder="95%">
+          </div>
+        </li>
+        <li>
+          <div class="checkbox-container">
+            <input type="checkbox" id="thirst" checked="">
+            <label for="thirst">Show Water</label>
+            <input id="thirst-val" type="number" placeholder="95%">
+          </div>
+        </li>
+        <hr>
+        <div class="hud-settings-bottom-container">
+          <input type="checkbox" id="lungs" checked="">
+          <label for="lungs">Show Oxygen when relevant</label>
+        </div>
+        <div class="hud-settings-bottom-container">
+          <input type="checkbox" id="stamina" checked="">
+          <label for="stamina">Show Stamina when relevant</label>
+        </div>
+        <div style="text-align: center">
+          <button class="save-btn">Save</button>
+        </div>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <div class="vehicle-container" style="display: none; overflow: hidden;">
+    <div class="outline">
+      <center>
+        <div class="mapborder"></div>
+      </center>
+    </div>
+    <svg width="75" height="75" class="speedSVG">
+      <circle id="SpeedGauge" class="backgroundCircle" stroke="#FFFFFF" stroke-width="5.4" style="stroke-opacity: 0.5;"
+        fill="transparent" r="25" cx="38" cy="39" stroke-dasharray="77 53" stroke-dashoffset="0" />
+      <circle id="SpeedMeter" class="progress2 Speed_Meter" stroke="white" stroke-width="5.4" style="stroke-opacity: 1;"
+        fill="transparent" r="25" cx="37" cy="39" stroke-dasharray="0" stroke-dashoffset="0" />
+    </svg>
+    <div id="SpeedMeter" class="Speed_Meter">300</div>
+    <div id="mph" class="mph">MPH</div>
+
+    <div class="fuel">
+      <svg id="GasGauge" class="circle" width="40" height="40">
+        <circle class="backgroundCircle" stroke="#FFFFFF" stroke-width="3" style="stroke-opacity: 0.5;"
+          fill="transparent" r="12" cx="20" cy="20" stroke-dasharray="46 20" stroke-dashoffset="0" />
+        <circle class="progress Gas_gauge" id="fuel-shit" stroke="white" stroke-width="3" style="stroke-opacity: 1;"
+          fill="transparent" r="12" cx="20" cy="20" stroke-dasharray="46 20" stroke-dashoffset="0" />
+      </svg>
+      <div id="GasIcon" class="Gas_Icon"><i class="fas fa-gas-pump"></i></div>
+    </div>
+    <div class="seatbelt">
+      <img src="imgs/seatbeltoff.png" />
+    </div>
+    <div class="direction" id="direction" style="display: none;">
+      <div class="image"></div>
+    </div>
+    <div class="topcompass" id="topcompass" style="display: none;">
+      <div class="topimg"></div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

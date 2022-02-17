@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/6b037c9e5a.js" crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="characters-icons">
+        
+    </div>
+    <div class="character-wrapper">
+        <div class="character-details">
+            <span class="char-name"></span> 
+            <span class="char-cid"></span>
+        </div>
+    </div>
+    <div class="character-info-wrapper">
+        
+    </div>
+    <div class="character-mainregister-wrapper">
+        <div class="character-register-wrapper">
+            <span style="color:red;font-weight:900;margin-top:2.5%;display: none;" class="register-errorbox">ERROR:Check your entries</span>
+            <div class="character-regiter-inputs">
+                <div class="character-register-inputbox">
+                    <div class="register-symbol"><i class="fas fa-user-circle"></i></div>
+                    <input type="text" id="register_firstname" class="character-register-input" placeholder="First Name" >
+                </div>
+                <div class="character-register-inputbox">
+                    <div class="register-symbol"><i class="fas fa-user-circle"></i></div>
+                    <input type="text" id="register_lastname" class="character-register-input" placeholder="Last Name">
+                </div>
+                <div class="character-register-inputbox" style="margin-top:5%;">
+                    <div class="register-symbol"><i class="fas fa-globe-americas"></i></div>
+                    <input type="text" id="register_nationality" class="character-register-input" placeholder="Nationality">
+                </div>
+                <div class="character-register-inputbox" style="margin-top:5%;">
+                    <div class="register-symbol"><i class="fas fa-calendar-alt"></i></div>
+                    <input type="date" id="register_date" class="character-register-input" max="new Date()" placeholder="Your date" >
+                </div>
+                <div class="character-register-inputbox" style="margin-top:5%;">
+                    <div class="register-symbol"><i class="fas fa-venus-mars"></i></div>
+                    <select class="character-regiter-select" id="register_gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Rather not to say</option>
+                    </select>
+                </div>
+                <div class="character-register-buttons">
+                    <button type="button" data-action="play" class="character-register-button play">Play now</button>
+                    <button type="button" data-action="goback" class="character-register-button back" >Go back </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

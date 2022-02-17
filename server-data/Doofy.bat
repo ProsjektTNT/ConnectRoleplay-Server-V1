@@ -1,0 +1,1 @@
+C:\Twitch-3.5\FXServer.exe +exec server.cfg 
