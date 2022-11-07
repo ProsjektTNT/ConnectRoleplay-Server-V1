@@ -1,6 +1,6 @@
 XZConfig = {}
 
-XZConfig.MaxPlayers = GetConvarInt('sv_maxclients', 48) -- Gets max players from config file, default 32
+XZConfig.MaxPlayers = GetConvarInt('sv_maxclients', 8) -- Gets max players from config file, default 32
 XZConfig.DefaultSpawn = {x=-1035.71,y=-2731.87,z=12.86,a=0.0}
 
 XZConfig.Money = {}
