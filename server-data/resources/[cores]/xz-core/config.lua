@@ -26,7 +26,7 @@ XZConfig.Player.Bloodtypes = {
 
 XZConfig.Server = {} -- General server config
 XZConfig.Server.closed = false -- Set server closed (no one can join except people with ace permission 'XZAdmin.join')
-XZConfig.Server.closedReason = "Closed for testing." -- Reason message to display when people can't join the server
+XZConfig.Server.closedReason = "Stengt for testing." -- Reason message to display when people can't join the server
 XZConfig.Server.uptime = 0 -- Time the server has been up.
-XZConfig.Server.discord = "https://discord.gg/Rss88ESsWA" -- Discord invite link
+XZConfig.Server.discord = "https://discord.gg/tnt" -- Discord invite link
 XZConfig.Server.PermissionList = {"license:88c4f89bfcbbf4c5eac449133f45b45043d146c1"} -- permission list
